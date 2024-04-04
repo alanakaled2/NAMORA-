@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você aceita?</title>
+
+</head>
+<body>
+
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background: rgba(254, 73, 73, 0.836);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.conteudo{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+    gap: 30px
+}
+
+h2{
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn{
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+    </style>
+
+    <div class="conteudo">
+        <h2>Aceita namorar comigo?</h2>
+
+            <button class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onmouseover="mover(this)" onclick="nao()">NÃO</button>
+
+        
+    </div>
+
+    <script>
+
+        function sim(){
+            alert('Parabéns, você fez a melhor escolha 😘​😎​😏​')
+            setTimeout(function() {
+                window.location.href = "https://www.youtube.com/watch?v=Xh7bdsJWJCU";
+            }, 500);
+        }
+
+        function nao(){
+            alert('Erro!!! Tente novamente, sua resposta está incorreta ❌')
+            
+        }
+        function mover(x){
+            marginX = Math.floor(Math.random()*600)
+            marginY = Math.floor(Math.random()*600)
+
+            x.style.margin = marginY.toString() + 'px ' + marginX.toString() + 'px'
+        }
+    </script>
+
+</body>
+
+    
